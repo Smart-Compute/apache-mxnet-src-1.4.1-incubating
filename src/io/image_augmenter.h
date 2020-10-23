@@ -29,6 +29,7 @@
 
 #if MXNET_USE_OPENCV
 #include <opencv2/opencv.hpp>
+// 可能是clang-tidy用法
 #include <vector>  // NOLINT(*)
 #include <utility> // NOLINT(*)
 #include <string> // NOLINT(*)

@@ -34,7 +34,9 @@ namespace storage {
 /*!
  * \brief Naive storage manager.
  */
+// 类模板
 template <class DeviceStorage>
+// final禁止类继承，禁止方法重写
 class NaiveStorageManager final : public StorageManager {
  public:
   /*!

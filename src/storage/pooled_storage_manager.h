@@ -34,6 +34,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <vector>
+// 自解锁
 #include <mutex>
 #include <new>
 #include "./storage_manager.h"
@@ -55,6 +56,7 @@ class GPUPooledStorageManager final : public StorageManager {
    * \brief Default constructor.
    */
   GPUPooledStorageManager() {
+    // 此处变量为何可以这样定义
     reserve_ = dmlc::GetEnv("MXNET_GPU_MEM_POOL_RESERVE", 5);
     page_size_ = dmlc::GetEnv("MXNET_GPU_MEM_POOL_PAGE_SIZE", 4096);
     large_alloc_round_size_ = dmlc::GetEnv("MXNET_GPU_MEM_LARGE_ALLOC_ROUND_SIZE", 2 * 1024 * 1024);

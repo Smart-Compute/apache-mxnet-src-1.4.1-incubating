@@ -67,6 +67,8 @@ class TBlob {
   friend class NDArray;
  public:
   /*! \brief pointer to the data */
+  // void指针可以指向任意类型的数据，即可用任意数据类型的指针对void指针赋值
+  // https://blog.csdn.net/Lee_Shuai/article/details/53193436
   void *dptr_;
   /*! \brief shape of the tensor */
   TShape shape_;

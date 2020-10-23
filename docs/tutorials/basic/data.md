@@ -23,9 +23,9 @@ Here we discuss the API conventions and several provided iterators.
 
 ## Prerequisites
 
-To complete this tutorial, we need:  
+To complete this tutorial, we need:
 
-- MXNet. See the instructions for your operating system in [Setup and Installation](http://mxnet.io/install/index.html).  
+- MXNet. See the instructions for your operating system in [Setup and Installation](http://mxnet.io/install/index.html).
 
 - [OpenCV Python library](http://opencv.org/opencv-3-2.html),  [Python Requests](http://docs.python-requests.org/en/master/), [Matplotlib](https://matplotlib.org/) and [Jupyter Notebook](http://jupyter.org/index.html).
 
@@ -42,7 +42,7 @@ Iterators provide an abstract interface for traversing various types of iterable
  without needing to expose details about the underlying data source.
 
 In MXNet, data iterators return a batch of data as `DataBatch` on each call to `next`.
-A `DataBatch` often contains *n* training examples and their corresponding labels. Here *n* is the `batch_size` of the iterator. At the end of the data stream when there is no more data to read, the iterator raises ``StopIteration`` exception like Python `iter`. 
+A `DataBatch` often contains *n* training examples and their corresponding labels. Here *n* is the `batch_size` of the iterator. At the end of the data stream when there is no more data to read, the iterator raises ``StopIteration`` exception like Python `iter`.
 The structure of `DataBatch` is defined [here](http://mxnet.io/api/python/io/io.html#mxnet.io.DataBatch).
 
 Information such as name, shape, type and layout on each training example and their corresponding label can be provided as `DataDesc` data descriptor objects via the `provide_data` and `provide_label` properties in `DataBatch`.
@@ -197,14 +197,14 @@ mod = mx.mod.Module(symbol=net)
 mod.fit(data_iter, num_epoch=5)
 ```
 
-A note on python 3 usage: Lot of the methods in mxnet use string for python2 and bytes for python3. 
+A note on python 3 usage: Lot of the methods in mxnet use string for python2 and bytes for python3.
 In order to keep this tutorial readable, we are going to define a utility function that converts
 string to bytes in python 3 environment
 
 ```python
 def str_or_bytes(str):
     """
-    A utility function for this tutorial that helps us convert string 
+    A utility function for this tutorial that helps us convert string
     to bytes if we are using python3.
 
     Parameters
@@ -365,7 +365,7 @@ tar.close()
 ```
 
 #### Loading raw images
-`mx.image.imdecode` lets us load the images. `imdecode` provides a similar interface to ``OpenCV``.  
+`mx.image.imdecode` lets us load the images. `imdecode` provides a similar interface to ``OpenCV``.
 
 **Note:** You will still need ``OpenCV``(not the CV2 Python library) installed to use `mx.image.imdecode`.
 

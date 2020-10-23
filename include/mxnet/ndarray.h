@@ -214,7 +214,7 @@ class NDArray {
     return shape_;
   }
   /*!
-   * \return the shape of underlying chunk which stores the NDArray data/value.
+   * \return the shape of underlying(潜在的) chunk which stores the NDArray data/value.
    *  It is only intended for non-default storage. For row-sparse storage, it is the shape of
    *  the tensor which stores the non-zero values.
    */
